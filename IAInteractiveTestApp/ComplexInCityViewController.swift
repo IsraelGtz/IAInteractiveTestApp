@@ -222,7 +222,7 @@ class ComplexInCityViewController: UIViewController, UITableViewDelegate, UITabl
             
             var arrayOfMovieId: Array<Movie> = Array<Movie>()
             
-            let results = billBoardTable.select(distinct: idPelicula).where(idComplejo == Int64(arrayOfElements[indexPath.row].id)!)
+            let results = billBoardTable.select(distinct: idPelicula).where(idComplejo == Int64(selectedComplex.id)!)
             
             
             
