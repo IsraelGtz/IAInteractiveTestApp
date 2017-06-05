@@ -16,7 +16,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        self.loadController()
+        
         return true
+        
+    }
+    
+    fileprivate func loadController() {
+        
+        let splashViewController = SplashViewController()
+        let mainNavigationController = UINavigationController.init(rootViewController: splashViewController)
+        
+        window = UIWindow.init(frame: UIScreen.main.bounds)
+        window?.rootViewController = mainNavigationController
+        window?.makeKeyAndVisible()
+        
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
